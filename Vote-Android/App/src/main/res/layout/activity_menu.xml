@@ -13,7 +13,7 @@
     <!-- Onglet 1 : Liste des votes en cours -->
     <fragment
         android:id="@+id/fragment1"
-        android:name="com.example.app.Fragments.VoteOpenFragment"
+        android:name="master.if26.vote.Fragments.VoteOpenFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/votes_list_entry" />
@@ -21,7 +21,7 @@
     <!-- Onglet 2 : Liste des votes terminées -->
     <fragment
         android:id="@+id/fragment2"
-        android:name="com.example.app.Fragments.VoteCloseFragment"
+        android:name="master.if26.vote.Fragments.VoteCloseFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/votes_list_entry" />
@@ -29,7 +29,7 @@
     <!-- Onglet 3 : Information sur l'application -->
     <fragment
         android:id="@+id/fragment3"
-        android:name="com.example.app.Fragments.AboutFragment"
+        android:name="master.if26.vote.Fragments.AboutFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_about" />

@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import master.if26.vote.Constants.WebServiceConstants;
 import master.if26.vote.R;
 
 import master.if26.vote.Constants.IntentConstants;
@@ -94,4 +93,5 @@ public class ResultatsFragment extends ListFragment
         }
 
     }
+}
 

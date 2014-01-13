@@ -15,7 +15,7 @@
         android:id="@+id/fragment_winner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.example.app.Fragments.WinnerFragment"
+        android:name="master.if26.vote.Fragments.WinnerFragment"
         android:smoothScrollbar="true"
         tools:layout="@layout/winner_list_entry"/>
 
@@ -25,7 +25,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:name="com.example.app.Fragments.ResultatsFragment"
+        android:name="master.if26.vote.Fragments.ResultatsFragment"
         android:smoothScrollbar="true"
         tools:layout="@layout/resultats_list_entry"/>
 

@@ -2,14 +2,8 @@ package master.if26.vote.Activity;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -127,6 +121,26 @@ public class MenuActivity extends ActionBarActivity implements ActionBar.TabList
 
     //Fonction dans le cas un onglet est resélectionné (non utilisée pour l'application)
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+        //Affiche un Toast contennat le nom de l'onglet sélectionné
+        Toast.makeText(this, tab.getText() + " selectionné", Toast.LENGTH_SHORT).show();
+
+        VoteOpenFragment fragment1 = ((VoteOpenFragment) getSupportFragmentManager().findFragmentById(R.id.fragment1));
+        VoteCloseFragment fragment2 = ((VoteCloseFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2));
+        AboutFragment fragment3 = ((AboutFragment) getSupportFragmentManager().findFragmentById(R.id.fragment3));
+
+        //Si l'onglet 1 est sélectionné alors l'afficher
+        if (tab.getText().equals(TAB_1)){
+            fragmentTransaction.show(fragment1);
+
+        }
+        //Sinon, si c'est l'onglet 2 qui est sélectionné, alors afficher son contenu
+        else if (tab.getText().equals(TAB_2)){
+            fragmentTransaction.show(fragment2);
+        }
+        //Sinon, si c'est l'onglet 3 qui est sélectionné, alors afficher son contenu
+        else if (tab.getText().equals(TAB_3)){
+            fragmentTransaction.show(fragment3);
+        }
     }
 
 

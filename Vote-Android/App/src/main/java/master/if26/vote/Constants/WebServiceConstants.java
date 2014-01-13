@@ -93,7 +93,6 @@ public class WebServiceConstants {
 
         public static final String CANDIDAT = "idcandidat";
         public static final String NBVOIES = "nbvoies";
-        public static final String WINNER = "winner";
     }
 
     public static class WINNERS
@@ -104,7 +103,6 @@ public class WebServiceConstants {
         public static final String RESULTAT = "resultats";
 
         public static final String CANDIDAT = "idcandidat";
-        public static final String NBVOIES = "nbvoies";
         public static final String WINNER = "winner";
     }
 

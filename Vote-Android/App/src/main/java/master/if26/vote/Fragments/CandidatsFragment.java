@@ -1,15 +1,11 @@
 package master.if26.vote.Fragments;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import master.if26.vote.Activity.MenuActivity;
-import master.if26.vote.Model.Vote;
 import master.if26.vote.R;
 import master.if26.vote.Model.Candidat;
 import master.if26.vote.Constants.*;
 import master.if26.vote.Services.CandidatService;
 import master.if26.vote.Services.CandidatsService;
-import master.if26.vote.Services.VoteOpenService;
 
 /**
  * + Projet : IF26 - Application de vote

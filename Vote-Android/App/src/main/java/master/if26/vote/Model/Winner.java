@@ -6,7 +6,7 @@ public class Winner {
 
     public String name;
     public String candidat;
-    public String winner;
+
     public Vote vote;
     public User user;
 }

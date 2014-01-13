@@ -27,7 +27,7 @@ Layout faisant appelle au layout "candidats_list_entry".
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:name="com.example.app.Fragments.CandidatsFragment"
+        android:name="master.if26.vote.Fragments.CandidatsFragment"
         android:smoothScrollbar="true"
         tools:layout="@layout/candidats_list_entry"/>
 
