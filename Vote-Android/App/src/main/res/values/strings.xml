@@ -12,6 +12,10 @@
     <string name="password">Mot de passe</string>
     <string name="connect">Connexion</string>
     <string name="create_account">Créer un compte</string>
+        <!-- Hint pour la page de connexion lors d'une erreur -->
+        <string name="email_error">Adresse email invalide</string>
+        <string name="password_required">Mot de passe requis</string>
+        <string name="login_error">Mauvais email/mot de passe</string>
 
 
     <!-- Création de compte -->

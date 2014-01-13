@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout permettant l'appel de chacun des onglets, et des fragments qui leurs
+ sont associés -->
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!-- Onglet 1 : Liste des votes en cours -->
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="master.if26.vote.Fragments.VoteOpenFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/votes_list_entry" />
+
+</LinearLayout>
