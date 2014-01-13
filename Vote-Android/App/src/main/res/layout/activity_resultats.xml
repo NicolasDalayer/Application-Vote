@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Liste des resultats d'un vote -->
+
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragment_winner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="master.if26.vote.Fragments.WinnerFragment"
+        android:smoothScrollbar="true"
+        tools:layout="@layout/winner_list_entry"/>
+
+    <fragment
+        android:id="@+id/fragment_resultats"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="master.if26.vote.Fragments.ResultatsFragment"
+        android:smoothScrollbar="true"
+        tools:layout="@layout/resultats_list_entry"/>
+
+
+</LinearLayout>
