@@ -14,5 +14,9 @@
     <string name="create_account">Créer un compte</string>
 
 
-
+    <!-- Création de compte -->
+    <string name="email_new">Adresse E-mail</string>
+    <string name="password_new">Mot de passe</string>
+    <string name="valider_createaccount">Valider</string>
+    <string name="annuler_createaccount">Retour</string>
 </resources>

@@ -1,0 +1,53 @@
+<!-- Page de creation d'un compte utilisateur -->
+<!--
+ Layout de la page de creation d'un compte utilisateur, qui permet de saisir un nom
+ et un mot de passe utilisateur devant être enregistrés.
+
+ Deux boutons, l'un pour valider le formulaire, et le second pour annuler l'action
+
+ Le tout centré en vertical (fonction orientation et gravity).
+
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".CreateAccountActivity">
+
+    <!-- Champ de saisi de l'adresse E-mail -->
+    <EditText
+        android:id="@+id/email_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email" />
+
+    <!-- Champ de saisi du mot de passe -->
+    <EditText
+        android:id="@+id/password_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/password" />
+
+    <!-- Bouton de connexion -->
+    <Button
+        android:id="@+id/valide_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/valider_createaccount" />
+
+    <!-- Bouton de création de compte -->
+    <Button
+        android:id="@+id/cancel_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/annuler_createaccount" />
+</LinearLayout>
