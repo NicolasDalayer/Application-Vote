@@ -18,7 +18,10 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textSize="@dimen/activity_about_margin"
-        android:smoothScrollbar="true"
-        android:text="@string/app_about" />
+        android:text="Vote est une application développée dans le cadre d'un projet en IF26.
+        Les auteurs de cette application sont Nicolas D\'ALAYER et  Alexandre ORTIZ.
+        L\'application permet de visualiser des votes en cours et terminés. Lorsqu\'un vote est en cours, après un clique sur celui-ci, il est possible d\'envoyer notre choix pour le candidat figurant dans la liste. Attention, vous ne pouvez voter qu\'une seul et unique fois ! Lorsque le vote est terminé, vous pouvez consulter le résultat dans le second onglet, et en cliquant sur le vote désirer. En effet, la navgation dans l\'application se fait essentiellement par des cliques sur un élément de la liste.
+
+        Nous vous souhaitons une bonne utilisation de l'application !" />
 
 </RelativeLayout>

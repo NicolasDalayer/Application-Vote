@@ -35,9 +35,6 @@
     <string name="vote_error">Vous avez déjà voté !</string>
     <string name="vote_ok">Votre vote est envoyé !</string>
 
-    <!-- Informations de l'application  -->
-    <string name="app_about">Informations</string>
-
     <!--Titres des activity -->
     <!--Titre de l'Acitivity après connexion -->
     <string name="title_activity_MenuActivity">Menu</string>
