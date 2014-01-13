@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Liste d'affichage de la liste des votes
-
-
- -->
+<!-- Affichage du nom du candidat gagnant -->
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,13 +8,14 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
+    <!-- Affichage d'un texte -->
     <TextView
         android:text="Le gagnant est : "
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <!-- Champ d'affichage de la description du vote du vote -->
+    <!-- Champ d'affichage du nom du candidat. -->
     <TextView
         android:id="@+id/candidatwinner"
 

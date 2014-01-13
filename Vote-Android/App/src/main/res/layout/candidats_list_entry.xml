@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Layout permettant la mise en liste les candidats participants au vote
- sélectionné. En face de chacun des candidats, une checkbox permettant de
- sélectionner le candidats pour qui on souhait voter. -->
+ sélectionné. -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

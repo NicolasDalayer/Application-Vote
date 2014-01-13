@@ -37,14 +37,14 @@
         android:inputType="textPassword"
         android:hint="@string/password" />
 
-    <!-- Bouton de connexion -->
+    <!-- Bouton de validation du formulaire -->
     <Button
         android:id="@+id/valide_create_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/valider_createaccount" />
 
-    <!-- Bouton de création de compte -->
+    <!-- Bouton d'annulation -->
     <Button
         android:id="@+id/cancel_account"
         android:layout_width="match_parent"

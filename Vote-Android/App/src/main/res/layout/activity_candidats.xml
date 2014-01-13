@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Liste des candidats d'un vote -->
 <!--
-
+Affiche un descriptif de la page.
 Layout faisant appelle au layout "candidats_list_entry".
-
  -->
 
 <LinearLayout
@@ -12,7 +11,7 @@ Layout faisant appelle au layout "candidats_list_entry".
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+    <!-- Affichage de la description -->
     <TextView
         android:text="@string/info_activity_candidats"
         android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -22,12 +21,13 @@ Layout faisant appelle au layout "candidats_list_entry".
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <!-- Fragement affichant la liste des candidats du vote sélectionné -->
     <fragment
         android:id="@+id/fragment_candidats"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:name="master.if26.vote.Fragments.CandidatsFragment"
+        android:name="com.example.app.Fragments.CandidatsFragment"
         android:smoothScrollbar="true"
         tools:layout="@layout/candidats_list_entry"/>
 

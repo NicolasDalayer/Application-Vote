@@ -10,20 +10,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- Fragement affichant le candidat gagnant du vote terminé sélectionné -->
     <fragment
         android:id="@+id/fragment_winner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="master.if26.vote.Fragments.WinnerFragment"
+        android:name="com.example.app.Fragments.WinnerFragment"
         android:smoothScrollbar="true"
         tools:layout="@layout/winner_list_entry"/>
 
+    <!-- Fragement affichant la liste des candidats du vote terminé sélectionné -->
     <fragment
         android:id="@+id/fragment_resultats"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:name="master.if26.vote.Fragments.ResultatsFragment"
+        android:name="com.example.app.Fragments.ResultatsFragment"
         android:smoothScrollbar="true"
         tools:layout="@layout/resultats_list_entry"/>
 

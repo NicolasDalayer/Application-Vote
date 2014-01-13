@@ -26,15 +26,6 @@ public class AboutFragment  extends Fragment {
     private String name;
     private int id;
 
-    public AboutFragment(){
-    }
-
-    public AboutFragment(String name, int id){
-        super();
-        this.name = name;
-        this.id = id;
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 

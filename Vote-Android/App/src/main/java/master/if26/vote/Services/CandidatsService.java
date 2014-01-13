@@ -1,10 +1,10 @@
 package master.if26.vote.Services;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -12,13 +12,15 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import master.if26.vote.Constants.*;
-import master.if26.vote.Model.VoteClose;
+import master.if26.vote.Model.Candidat;
 
 /**
  * + Projet : IF26 - Application de vote
@@ -27,59 +29,55 @@ import master.if26.vote.Model.VoteClose;
  * + Auteur : Nicolas D'ALAYER DE COSTEMORE D'ARC & Alexandre ORTIZ
  * -----------------------------------------------------------------
  * + Type : Service
- * + Name : VoteClose.java
- * + Fichiers liés : Constants.WebServiceConstants - Model.VoteClose
- * + Description : Service qui sera utilisé pour obtenu la liste des
- * votes qui sont terminés.
+ * + Name : Candidats.java
+ * + Fichiers liés : Constants.WebServiceConstants - Model.Candidat
+ * + Description : Service qui sera utilisé pour demander et récupérer la liste
+ * des candidats participant au vote en cours précédement sélectionné
  */
 
-public class VoteCloseService extends AsyncTask<String, Void, ArrayList<VoteClose>>
+public class CandidatsService extends AsyncTask<String, Void, ArrayList<Candidat>>
 {
     @Override
-    protected ArrayList<VoteClose> doInBackground(String... params)
+    protected ArrayList<Candidat> doInBackground(String... params)
     {
-        // Déclaration des paramètres requis pour l'envoi de la requête au serveur.
+        //Paramètres requis pour envoyer la demande au serveur.
         String token = params[0];
+        String vote = params[1];
 
-        // Déclaration de la Base uri a utiliser
-        String uri = WebServiceConstants.VOTESCLOSE.URI;
+        // Déclaration de la Base uri à utiliser
+        String uri = WebServiceConstants.CANDIDATS.URI;
 
         // Query string
         List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        nameValuePairs.add(new BasicNameValuePair(WebServiceConstants.VOTESCLOSE.TOKEN, token));
+        nameValuePairs.add(new BasicNameValuePair(WebServiceConstants.CANDIDATS.TOKEN, token));
+        nameValuePairs.add(new BasicNameValuePair(WebServiceConstants.CANDIDATS.VOTE, vote));
 
         uri += "?" + URLEncodedUtils.format(nameValuePairs, "utf-8");
 
         HttpGet httpGet = new HttpGet(uri);
         DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 
-        ArrayList<VoteClose> votesClose = new ArrayList<VoteClose>();
+        ArrayList<Candidat> candidats = new ArrayList<Candidat>();
         try
         {
             HttpResponse httpResponse = defaultHttpClient.execute(httpGet, new BasicHttpContext());
             String response = EntityUtils.toString(httpResponse.getEntity());
 
             JSONObject jsonObject = new JSONObject(response);
-            if(jsonObject.has(WebServiceConstants.VOTESCLOSE.VOTES))
+            if(jsonObject.has(WebServiceConstants.CANDIDATS.CANDIDATS))
             {
-                JSONArray jsonArray = jsonObject.getJSONArray(WebServiceConstants.VOTESCLOSE.VOTES);
+                JSONArray jsonArray = jsonObject.getJSONArray(WebServiceConstants.CANDIDATS.CANDIDATS);
                 for(int index = 0; index < jsonArray.length(); index++)
                 {
-                    VoteClose voteClose = new VoteClose();
-                    voteClose.id = jsonArray.getJSONObject(index).getInt(WebServiceConstants.VOTESCLOSE.ID);
-                    voteClose.name = jsonArray.getJSONObject(index).getString(WebServiceConstants.VOTESCLOSE.NAME);
-                    voteClose.description = jsonArray.getJSONObject(index).getString(WebServiceConstants.VOTESCLOSE.DESC);
-                    voteClose.date = jsonArray.getJSONObject(index).getString(WebServiceConstants.VOTESCLOSE.DEADLINE);
+                    Candidat candidat = new Candidat();
+                    candidat.id = jsonArray.getJSONObject(index).getString(WebServiceConstants.CANDIDATS.ID);
+                    candidat.candidat = jsonArray.getJSONObject(index).getString(WebServiceConstants.CANDIDATS.CANDIDAT);
 
-                    votesClose.add(voteClose);
+                    candidats.add(candidat);
                 }
             }
+            return candidats;
         }
-        catch(Exception exception)
-        {
-            Log.e("VoteCloseService", exception.getMessage(), exception);
-        }
-        /*
         catch(JSONException jsonException)
         {
 
@@ -92,8 +90,6 @@ public class VoteCloseService extends AsyncTask<String, Void, ArrayList<VoteClos
         {
 
         }
-        */
-        return votesClose;
+        return candidats;
     }
 }
-

@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Par default-->
-    <string name="app_name">VoteV7</string>
+    <string name="app_name">Vote Android</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
@@ -12,15 +12,40 @@
     <string name="password">Mot de passe</string>
     <string name="connect">Connexion</string>
     <string name="create_account">Créer un compte</string>
-        <!-- Hint pour la page de connexion lors d'une erreur -->
-        <string name="email_error">Adresse email invalide</string>
-        <string name="password_required">Mot de passe requis</string>
-        <string name="login_error">Mauvais email/mot de passe</string>
-
+    <!-- Hint pour la page de connexion lors d'une erreur -->
+    <string name="email_error">Adresse email invalide</string>
+    <string name="password_required">Mot de passe requis</string>
+    <string name="login_error">Mauvais email/mot de passe</string>
 
     <!-- Création de compte -->
     <string name="email_new">Adresse E-mail</string>
     <string name="password_new">Mot de passe</string>
     <string name="valider_createaccount">Valider</string>
     <string name="annuler_createaccount">Retour</string>
+    <!-- Hint pour la page de création de compte lors d'une erreur -->
+    <string name="createaccount_ok">Compte créé</string>
+    <string name="createaccount_error">Erreur dans le email et/ou mot de passe</string>
+    <string name="createaccount_error2">Ce compte existe déjà !</string>
+
+    <!-- Liste des Candidats d'un vote en cours -->
+    <!-- Info  -->
+    <string name="info_activity_candidats">Pour voter, cliquez sur le candidat. Attention, vous ne pouvez que une fois !</string>
+
+    <!-- Hint pour la page des candidats, lorsqu'il y a eu un clic sur un candidat -->
+    <string name="vote_error">Vous avez déjà voté !</string>
+    <string name="vote_ok">Votre vote est envoyé !</string>
+
+    <!-- Informations de l'application  -->
+    <string name="app_about">Informations</string>
+
+    <!--Titres des activity -->
+    <!--Titre de l'Acitivity après connexion -->
+    <string name="title_activity_MenuActivity">Menu</string>
+    <!--Titre de l'Activity après sélection d'un vote en cours, pour afficher la liste des candidats -->
+    <string name="title_activity_Candidats">Candidats</string>
+    <!--Titre de l'Activity de création de compte utilisateur -->
+    <string name="title_activity_CreateAccount">Creer un Compte</string>
+    <!--Titre de l'Acitivity après sélection d'un vote terminé, pour afficher les résultats du vote -->
+    <string name="title_activity_Resultats">Resultats</string>
+
 </resources>

@@ -1,5 +1,5 @@
-<!-- Layout faisant appel au Java "LoginFragment" et en utilisant
- le layout "fragment_login" pour afficher les éléments
+<!-- Layout faisant appel au Java "CreateAccountFragement" et en utilisant
+ le layout "fragment_createaccount" pour afficher les éléments
  -->
 
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -10,5 +10,5 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="master.if26.vote.Fragments.CreateAccountFragment"
+    android:name="com.example.app.Fragments.CreateAccountFragment"
     tools:layout="@layout/fragement_createaccount" />
