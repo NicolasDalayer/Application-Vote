@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Vote</string>
+    <!-- Par default-->
+    <string name="app_name">VoteV7</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+
+    <!-- Connexion -->
+    <string name="email">Adresse E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="connect">Connexion</string>
+    <string name="create_account">Créer un compte</string>
+
+
 
 </resources>

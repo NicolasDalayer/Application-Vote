@@ -1,20 +1,12 @@
-package master.if26.vote;
+package master.if26.vote.Activity;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.Button;
 
-import master.if26.vote.R
+import master.if26.vote.R;
 
 
 public class MainActivity extends FragmentActivity
